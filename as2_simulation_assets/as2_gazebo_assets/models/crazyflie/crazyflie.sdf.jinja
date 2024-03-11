@@ -315,9 +315,13 @@ Copyright (c) 2022 Bitcraze
         <enableSubTopic>enable</enableSubTopic>
         <comLinkName>crazyflie/body</comLinkName>
         <velocityGain>1000 1000 5000</velocityGain>
+        <!-- <attitudeGain>0.5 0.5 0.5</attitudeGain> -->
         <attitudeGain>0.5 0.5 0.5</attitudeGain>
+        <!-- <angularRateGain>1.5 1.5 1.5</angularRateGain> -->
         <angularRateGain>1.5 1.5 1.5</angularRateGain>
-        <maximumAngularVelocity>3 3 3</maximumAngularVelocity>
+        <!-- <maximumLinearAcceleration>1 1 2</maximumLinearAcceleration>
+        <maximumLinearVelocity>5 5 5</maximumLinearVelocity> -->
+        <!-- <maximumAngularVelocity>3 3 3</maximumAngularVelocity> -->
 
         <rotorConfiguration>
           <rotor>
@@ -345,6 +349,15 @@ Copyright (c) 2022 Bitcraze
             <direction>-1</direction>
           </rotor>
         </rotorConfiguration>
+      </plugin>
+      <plugin filename="ignition-gazebo-odometry-publisher-system"
+        name="ignition::gazebo::systems::OdometryPublisher">
+        <dimensions>3</dimensions>
+        <odom_publish_frequency>100</odom_publish_frequency>
+      </plugin>
+      <plugin
+        filename="ignition-gazebo-imu-system"
+        name="ignition::gazebo::systems::Imu">
       </plugin>
     </model>
 </sdf>
