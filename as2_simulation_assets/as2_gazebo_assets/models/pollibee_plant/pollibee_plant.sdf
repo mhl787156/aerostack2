@@ -22,7 +22,7 @@
         <pose frame=''>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://pollibee_flower/meshes/flower_individual.stl</uri>
+            <uri>model://pollibee_flower/meshes/flower.stl</uri>
             <scale>0.001 0.001 0.001</scale>
           </mesh>
         </geometry>
